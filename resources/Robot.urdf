@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<robot name="C:/Users/yen/Downloads/Robot.urdf" xmlns:xacro="http://ros.org/wiki/xacro">
+  <link name="base_link">
+    <visual>
+      <origin xyz="-0.041332 -0.1125 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.312664 0.233 0.212"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.041332 -0.1125 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.312664 0.233 0.212"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="Joint1" type="revolute">
+    <parent link="base_link"/>
+    <child link="Joint1_Link"/>
+    <axis xyz="0.000001 0 1"/>
+    <limit effort="150" lower="-2.9671" upper="2.9671" velocity="6.4577"/>
+    <origin xyz="0 -0.23 0" rpy="-1.570801 -0.252148 -3.141584"/>
+  </joint>
+  <link name="Joint1_Link">
+    <visual>
+      <origin xyz="-0.005 0.000788 0.1015" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.22 0.234424 0.219"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.005 0.000788 0.1015" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.22 0.234424 0.219"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="Joint2" type="revolute">
+    <parent link="Joint1_Link"/>
+    <child link="Joint2_Link"/>
+    <axis xyz="1 0 0.000001"/>
+    <limit effort="150" lower="-1.8326" upper="2.3562" velocity="4.5379"/>
+    <origin xyz="-0.025 0 0.14" rpy="1.883724 0 -1.5708"/>
+  </joint>
+  <link name="Joint2_Link">
+    <visual>
+      <origin xyz="0 0.220836 -0.006014" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.21 0.579818 0.153971"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0.220836 -0.006014" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.21 0.579818 0.153971"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="Joint3" type="revolute">
+    <parent link="Joint2_Link"/>
+    <child link="Joint3_Link"/>
+    <axis xyz="0.000001 0 -1"/>
+    <limit effort="150" lower="-3.5779" upper="1.0472" velocity="7.1558"/>
+    <origin xyz="0 0.44 0" rpy="-1.5708 -0.702306 1.570803"/>
+  </joint>
+  <link name="Joint3_Link">
+    <visual>
+      <origin xyz="0.02071 -0.03525 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.187408 0.2185 0.118"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.02071 -0.03525 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.187408 0.2185 0.118"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="Joint4" type="revolute">
+    <parent link="Joint3_Link"/>
+    <child link="Joint4_Link"/>
+    <axis xyz="0 -0.000001 1"/>
+    <limit effort="16.6" lower="-3.3161" upper="3.3161" velocity="9.5993"/>
+    <origin xyz="0.037215 -0.1945 -0.000913" rpy="-1.570734 1.569859 -3.141534"/>
+  </joint>
+  <link name="Joint4_Link">
+    <visual>
+      <origin xyz="-0.000913 0.009306 0.115896" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.124323 0.130099 0.331791"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.000913 0.009306 0.115896" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.124323 0.130099 0.331791"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="Joint5" type="revolute">
+    <parent link="Joint4_Link"/>
+    <child link="Joint5_Link"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="16.6" lower="-2.0944" upper="2.0944" velocity="9.5993"/>
+    <origin xyz="-0.000913 0.002756 0.2405" rpy="0.127547 0 0"/>
+  </joint>
+  <link name="Joint5_Link">
+    <visual>
+      <origin xyz="-0.000249 0 0.013" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.090498 0.089996 0.111"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.000249 0 0.013" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.090498 0.089996 0.111"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="Joint6" type="revolute">
+    <parent link="Joint5_Link"/>
+    <child link="Joint6_Link"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="9.4" lower="-6.2832" upper="6.2832" velocity="14.312"/>
+    <origin xyz="0 0 0.0655" rpy="0 0 0.2618"/>
+  </joint>
+  <link name="Joint6_Link">
+    <visual>
+      <origin xyz="0.000032 -0.00003 0.0055" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.072926 0.072926 0.014"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.000032 -0.00003 0.0055" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.072926 0.072926 0.014"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

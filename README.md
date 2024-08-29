@@ -8,6 +8,17 @@
 
 ![IKPy on the baxter robot](baxter.png)
 
+## about Delta robotic arm (DRV90L)
+1. urdf
+file path: resources/DRV90.urdf  
+line 92:  
+   rpy="-1.5708 0 -3.1416" (wrong)  ->   rpy="0 0 3.1416"  (correct)
+
+2.  tutorials  
+file path: tutorials/DRV.urdf  
+
+
+
 ## Demo
 
 Live demos of what IKPy can do \(click on the image below to see the video\):
